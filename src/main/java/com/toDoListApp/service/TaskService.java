@@ -79,7 +79,6 @@ public class TaskService {
     }
 
     public List<Task> getAllTasksByDoneStatus(boolean doneStatus) {
-        return
-                taskRepository.findAllByDoneStatus(doneStatus);
+        return taskRepository.findAllByDoneStatus(doneStatus);
     }
 }
