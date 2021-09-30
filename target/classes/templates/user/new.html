@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New task</title>
+</head>
+<body>
+<form action="#" th:action="@{/user/new}" th:object="${user}" method="post">
+    <h3><label for="name">NAME</label>
+        <input type="text" th:field="*{name}" id="name" placeholder="write your name">
+        <p><label for="surname">SURNAME </label>
+            <input type="text" th:field="*{surname}" id="surname" placeholder="write your name"></p>
+        <p><label for="birthday">BIRTHDAY</label>
+            <input type="date" th:field="*{birthday}" id="birthday" placeholder="dd.mm.yyyy"></p>
+        <p>SELECT YOUR SEX: </p>
+
+        <div>
+            <input type="radio" id="male" value="MALE" th:field="*{sex}">
+            <label for="male">MALE</label>
+        </div>
+        <div>
+            <input type="radio" id="female" value="FEMALE" th:field="*{sex}">
+            <label for="female">FEMALE</label>
+        </div>
+
+
+        <p><input type="submit" value="CREATE!"></p>
+    </h3>
+</form>
+</body>
+</html>
